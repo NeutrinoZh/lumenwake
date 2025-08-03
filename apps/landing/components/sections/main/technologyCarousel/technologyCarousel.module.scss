@@ -1,0 +1,28 @@
+.carouselWrapper {
+    overflow: hidden;
+    width: 100%;
+
+    .technologyCarousel {
+        height: 150px;
+
+        display: flex;
+        align-items: center;
+        width: fit-content;
+
+        animation: scrollLeft 30s linear infinite;
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .technologyIcon {
+            padding: 0 50px;
+        }
+    }
+}

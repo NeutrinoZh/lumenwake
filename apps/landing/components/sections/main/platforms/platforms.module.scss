@@ -1,0 +1,51 @@
+.platforms {
+    width: 100%;
+    height: 820px;
+
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        text-align: center;
+        padding: 110px 0%;
+    }
+
+    .cardContainer {
+        display: flex;
+
+        justify-content: space-around;
+        margin: 0% 5%;
+
+        .hline {
+            height: 1px;
+            background: radial-gradient(circle, #37DCFF, #000000);
+        }
+
+        .card {
+            width: 400px;
+            height: 496px;
+
+            .cardBlock {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                background-color: rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+
+                padding: 50px 0;
+
+                h1 {
+                    margin: 30px 0px;
+                }
+
+                p {
+                    color: white;
+                    padding: 0% 10%;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

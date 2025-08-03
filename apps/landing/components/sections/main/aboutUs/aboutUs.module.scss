@@ -1,0 +1,30 @@
+.aboutUs {
+    width: 100vw;
+    height: 620px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    padding: 0% 10%;
+
+    .texts {
+        width: 36%;
+
+        h1 {
+            text-align: center;
+            font-size: 38px;
+
+            padding-bottom: 5%;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+            font-size: 16;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.lineSection {
+    h1 {
+        text-align: center;
+        font-size: 38px;
+        margin: 40px 0%;
+
+        font-family: "Signika", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-variation-settings: "GRAD" 0;
+    }
+
+    .hline {
+        width: 100vw;
+        height: 1px;
+        background: radial-gradient(circle, #37DCFF, #000000);
+    }
+}
