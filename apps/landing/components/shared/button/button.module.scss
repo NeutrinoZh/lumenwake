@@ -1,0 +1,49 @@
+.button {
+    $border: 1px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 220px;
+    height: 60px;
+
+    position: relative;
+    box-sizing: border-box;
+
+    background: #070319;
+    background-clip: padding-box;
+    border: solid $border transparent;
+
+    border-radius: 20px;
+    padding: 0.5em;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -$border;
+        border-radius: inherit;
+        background: radial-gradient(circle, #37DCFF, #000000);
+    }
+
+    h1 {
+        font-size: 16;
+    }
+
+    transition: box-shadow 0.1s ease;
+    transition: background-color 0.1s ease;
+
+    &:hover {
+        box-shadow:
+            0 0 5px #37DCFF,
+            0 0 10px rgba(0, 255, 255, 0.2),
+            0 0 20px rgba(0, 255, 255, 0.023);
+
+        background-color: #1E0F24;
+    }
+}

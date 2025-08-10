@@ -4,6 +4,14 @@
 
     display: flex;
     justify-content: center;
+    overflow: hidden;
+
+    position: relative;
+
+    video {
+        position: relative;
+        top: -125px;
+    }
 
     .background {
         position: absolute;
@@ -36,11 +44,8 @@
             align-items: center;
             justify-content: center;
             align-self: center;
+            max-width: 25em;
             width: 55%;
-            max-width: 24em;
-            font-size: 1em;
-            font-style: normal;
-            text-align: left;
 
             position: relative;
             box-sizing: border-box;
@@ -51,6 +56,14 @@
 
             border-radius: 20px;
             padding: 0.5em;
+
+            h1 {
+                font-size: 1em;
+                text-align: left;
+
+                margin-left: 5%;
+                padding: 2%;
+            }
 
             &:before {
                 content: '';
@@ -63,11 +76,6 @@
                 margin: -$border;
                 border-radius: inherit;
                 background: radial-gradient(circle, #37DCFF, #000000);
-            }
-
-            p {
-                margin-left: 5%;
-                padding: 2%;
             }
         }
     }

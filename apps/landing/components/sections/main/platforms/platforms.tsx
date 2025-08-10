@@ -9,7 +9,7 @@ import webglIcon from "@/public/icons/webgl-icon.png"
 import Image from "next/image";
 
 import { randomUUID } from "crypto";
-import clsx from "clsx";
+import Heading from "@/components/shared/heading/heading";
 
 interface CardProps {
     icon: StaticImageData,
@@ -21,6 +21,7 @@ const Card = ({ icon, title, description }: CardProps) => (
     <div className={styles.card}>
         <div className={styles.hline}></div>
         <div className={styles.cardBlock}>
+            <div className={styles.lineEffect}></div>
             <div>
                 <Image
                     src={icon.src}
@@ -29,7 +30,7 @@ const Card = ({ icon, title, description }: CardProps) => (
                     alt={""}
                 />
             </div>
-            <h1 className={globalStyles.header}>{title}</h1>
+            <Heading>{title}</Heading>
             <p>
                 {description}
             </p>
@@ -40,27 +41,27 @@ const Card = ({ icon, title, description }: CardProps) => (
 
 export default function Platforms() {
     return (
-        <div className={styles.platforms}>
-            <h1 className={clsx(globalStyles.header, styles.title)}>Platforms we work with</h1>
+        <div id="platforms" className={styles.platforms}>
+            <Heading className={styles.title}>Platforms we work with</Heading>
             <div className={styles.cardContainer}>
                 <Card
                     icon={mobileIcon}
                     title="Mobile"
-                    description="We develop games of various profiles, from puzzles and match 3 to realistic games with top-notch graphics, delivering engaging Android, iOS, and cross-platform gaming experiences."
+                    description="We design and develop mobile games that bring immersive worlds and addictive mechanics right to players’ fingertips. Our mobile titles are optimized for smooth performance, intuitive controls, and engaging visuals across iOS and Android devices."
                     key={randomUUID()}
                 />
 
                 <Card
                     icon={pcIcon}
                     title="PC"
-                    description="Our PC and console games use the full extent of game engines’ power. We create mesmerizing titles for PlayStation, Xbox, Nintendo Switch, and PC, providing no borders for your imagination."
+                    description="Our PC games deliver rich, immersive experiences that take full advantage of modern hardware capabilities. Designed for players who enjoy detailed worlds and engaging gameplay, our titles offer a perfect balance of stunning visuals and deep mechanics."
                     key={randomUUID()}
                 />
 
                 <Card
                     icon={webglIcon}
                     title="WebGL"
-                    description="Our games can reach your players even through web browsers. Customizable controls and high-quality visuals – we provide seamless player experiences available from anywhere."
+                    description="Our WebGL games offer instant playability directly in a browser, without the need for downloads or installations. These projects are built to be lightweight yet visually striking, making them perfect for quick entertainment or social gaming experiences. "
                     key={randomUUID()}
                 />
             </div>

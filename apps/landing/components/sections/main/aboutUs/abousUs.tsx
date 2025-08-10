@@ -2,12 +2,13 @@ import styles from "./aboutUs.module.scss";
 import globalStyles from "@/app/variables.module.scss"
 
 import Image from "next/image";
-
 import Logo from "@/public/logo.png"
+import { Heading } from "@/components/shared/heading";
+import { Text } from "@/components/shared/text"
 
 export default function AboutUs() {
     return (
-        <div className={styles.aboutUs}>
+        <div id="about-us" className={styles.aboutUs}>
             <div className={styles.logoDiv}>
                 <Image
                     src={Logo.src}
@@ -17,8 +18,8 @@ export default function AboutUs() {
                 />
             </div>
             <div className={styles.texts}>
-                <h1 className={globalStyles.header}>About Us</h1>
-                <p>Lorem ipsum dolor sit amet consectetur. Volutpat lacus aliquam in sociis ac vulputate. Dolor amet pharetra pretium rhoncus nulla varius lorem ultrices. Tristique quisque maecenas at duis tristique turpis rhoncus. Vestibulum at et neque pulvinar id volutpat semper. Sed volutpat nibh enim volutpat orci vel consequat pharetra. Fermentum in non euismod amet vulputate tortor. Pretium eu </p>
+                <Heading>About Us</Heading>
+                <Text>We are a passionate game development studio dedicated to creating engaging, high-quality interactive experiences for players around the world. Specializing in mobile, WebGL and PC platforms, our team combines creativity, technical expertise, and innovative design to craft games that are visually stunning, mechanically satisfying, and rich in immersive worlds. From concept art to final release, we handle every stage of development with precision and care, ensuring that each project delivers a unique blend of fun, challenge, and replayability. </Text>
             </div>
         </div>
     )

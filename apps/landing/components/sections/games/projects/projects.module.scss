@@ -1,0 +1,24 @@
+.projects {
+    height: fit-content;
+
+    .projectsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5%;
+
+        .project {
+
+            min-width: 625px;
+            height: 325px;
+
+            margin: 2%;
+
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: rotateZ(10deg);
+            }
+        }
+    }
+}

@@ -7,6 +7,7 @@ import RayEffect from "./rayEffect";
 
 import Image from 'next/image'
 import FileIcon from "@/public/icons/file-icon.png"
+import Heading from "@/components/shared/heading/heading";
 
 export default function Intro() {
     return (
@@ -15,7 +16,7 @@ export default function Intro() {
                 <RayEffect />
             </div>
             <div className={styles.content}>
-                <h1 className={globalStyles.header}>Lumenwake</h1>
+                <Heading>Lumenwake</Heading>
                 <button className={globalStyles.header}>
                     <Image
                         src={FileIcon.src}
@@ -23,11 +24,11 @@ export default function Intro() {
                         width={26}
                         height={30}
                     />
-                    <p>
+                    <Heading>
                         Download<br /> our commercial proposal
-                    </p>
+                    </Heading>
                 </button>
             </div>
-        </div>
+        </div >
     )
 }

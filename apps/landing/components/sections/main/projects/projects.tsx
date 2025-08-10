@@ -1,15 +1,30 @@
-import styles from "./projects.module.scss";
-import globalStyles from "@/app/variables.module.scss"
-import clsx from "clsx";
-
-import Image from "next/image";
+'use client'
 
 import Arrow from "@/public/left-arrow.png"
-import SpaceBac from "@/public/spacebac-logo.png"
-import SteamIcon from "@/public/icons/steam-icon.png"
 
-const ArrowComponent = ({ cls }: { cls: string | undefined }) => (
-    <div className={clsx(styles.arrow, cls)}>
+import staticData from "@/staticData/staticData";
+import styles from "./projects.module.scss";
+
+import clsx from "clsx";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Image, { StaticImageData } from "next/image";
+
+import { Heading } from "@/components/shared/heading";
+import { Button } from "@/components/shared/button";
+import { Text } from "@/components/shared/text"
+
+interface ArrowComponentProps {
+    cls: string | undefined;
+    onClick?: () => void;
+}
+
+const ArrowComponent = ({
+    cls,
+    onClick
+}: ArrowComponentProps) => (
+    <div className={clsx(styles.arrow, cls)} onClick={onClick}>
         <Image
             src={Arrow.src}
             width={26}
@@ -19,37 +34,76 @@ const ArrowComponent = ({ cls }: { cls: string | undefined }) => (
     </div >
 )
 
-export default function Projects() {
+interface GameDescriptionProps {
+    title: string,
+    description: string,
+    character: StaticImageData,
+    id: string
+}
+
+const GameDescription = ({
+    title,
+    description,
+    character,
+    id
+}: GameDescriptionProps) => {
+    const router = useRouter();
+
+    function openDetails() {
+        router.push(`/projects/${id}`)
+    }
+
     return (
-        <div className={styles.projects}>
-            <ArrowComponent cls={styles.leftArrow} />
-            <div className={styles.content}>
-                <div className={styles.description}>
-                    <h1 className={globalStyles.header}>About the game</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur. Volutpat lacus aliquam in sociis ac vulputate. Dolor amet pharetra pretium rhoncus nulla varius lorem ultrices. Tristique quisque maecenas at duis tristique turpis rhoncus. Vestibulum at et neque pulvinar id volutpat semper. Sed volutpat nibh enim volutpat orci vel consequat pharetra. Fermentum in non euismod amet vulputate tortor. Pretium eu
-                    </p>
-                    <div className={styles.platforms}>
-                        <div className={styles.platform}>
-                            <Image
-                                src={SteamIcon.src}
-                                width={42}
-                                height={42}
-                                alt=""
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.image}>
-                    <Image
-                        src={SpaceBac.src}
-                        width={815}
-                        height={815}
-                        alt=""
-                    />
-                </div>
+        <div className={styles.content}>
+            <div className={styles.description}>
+                <Heading className={styles.title}>{title}</Heading>
+                <Text>
+                    {description}
+                </Text>
+
+                <Button
+                    value="See details"
+                    onClick={openDetails}
+                />
             </div>
-            <ArrowComponent cls={styles.rightArrow} />
+            <div className={styles.image}>
+                <Image
+                    src={character}
+                    width={512}
+                    height={512}
+                    alt=""
+                />
+            </div>
+        </div>
+    )
+}
+
+export default function Projects() {
+    const projectsData = staticData.projects;
+
+    const [index, setIndex] = useState(0)
+
+    function shift(amount: number) {
+        setIndex(prev => (prev + amount + projectsData.length) % projectsData.length)
+    }
+
+    return (
+        <div className={styles.projects} id="projects">
+            <ArrowComponent cls={styles.leftArrow} onClick={() => shift(-1)} />
+
+            {
+                projectsData[index] ?
+                    <GameDescription
+                        title={projectsData[index].name}
+                        description={projectsData[index].description}
+                        character={projectsData[index].character}
+                        id={projectsData[index].id}
+                    /> : <>
+                        Project Not Found
+                    </>
+            }
+
+            <ArrowComponent cls={styles.rightArrow} onClick={() => shift(1)} />
         </div>
     )
 }
