@@ -48,6 +48,10 @@
 
         h1 {
             font-size: 96px;
+
+            @media (max-width: 620px) {
+                font-size: 64px;
+            }
         }
 
         button {
