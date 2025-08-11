@@ -7,7 +7,7 @@ import RayEffect from "./rayEffect";
 
 import Image from 'next/image'
 import FileIcon from "@/public/icons/file-icon.png"
-import Heading from "@/components/shared/heading/heading";
+import { Heading } from "@/components/shared/heading";
 
 export default function Intro() {
     return (
@@ -22,7 +22,7 @@ export default function Intro() {
                         src={FileIcon.src}
                         alt="Download"
                         width={26}
-                        height={30}
+                        height={32}
                     />
                     <Heading>
                         Download<br /> our commercial proposal

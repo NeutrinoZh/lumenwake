@@ -6,6 +6,16 @@
     padding: 0% 235px;
     overflow: hidden;
 
+
+    @media (max-width: 1300px) {
+        padding: 0% 100px;
+
+
+        .image {
+            display: none;
+        }
+    }
+
     .arrow {
         user-select: none;
         margin: 350px 0px;

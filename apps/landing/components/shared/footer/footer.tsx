@@ -30,11 +30,6 @@ export default function Footer() {
                 />
             </div>
             <div className={styles.border} />
-            <div className={styles.textsContainer}>
-                <span>main</span>
-                <span>about</span>
-                <span>contact</span>
-            </div>
             <p>© All Rights Reserved Lumenwake Entertainment 2025</p>
         </footer>
     )

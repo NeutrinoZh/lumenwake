@@ -1,0 +1,9 @@
+.gallery {
+    height: fit-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px 20px;
+    gap: 50px;
+}

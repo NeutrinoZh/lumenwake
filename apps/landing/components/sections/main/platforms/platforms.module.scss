@@ -13,7 +13,9 @@
     .cardContainer {
         display: flex;
 
+        flex-wrap: wrap;
         justify-content: space-around;
+        gap: 3% 0%;
         margin: 0% 5%;
 
         .hline {

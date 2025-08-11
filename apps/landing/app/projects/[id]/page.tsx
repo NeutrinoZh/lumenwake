@@ -4,9 +4,9 @@ import staticData from "@/staticData/staticData";
 import { Header } from "@/components/shared/header";
 import { Intro } from "@/components/sections/project/intro";
 import { Hline } from "@/components/shared/hline"
-import { AboutUs } from "@/components/sections/main/aboutUs"
 import { Footer } from "@/components/shared/footer";
 import { About } from "@/components/sections/project/about";
+import { Gallery } from "@/components/sections/project/gallery";
 
 interface ProjectPageProps {
     params: {
@@ -34,7 +34,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                         characterPhoto={project.character}
                     />
                     <Hline header="Gallery" />
-                    <AboutUs />
+                    <Gallery
+                        screenshots={project.screenshots}
+                        isMobile={project.isMobile}
+                    />
                     <Footer />
                 </> : <div className={styles.notFound}>
                     Project doesn't exist

@@ -8,6 +8,10 @@
 
     .title {
         margin-bottom: 50px;
+
+        @media (max-width: 900px) {
+            margin-top: 10%;
+        }
     }
 
     form {
@@ -15,7 +19,11 @@
         flex-direction: column;
         z-index: 1;
 
-        width: 36.7vw;
+        width: 700px;
+
+        @media (max-width: 800px) {
+            width: 400px;
+        }
 
         .input {
             height: 70px;

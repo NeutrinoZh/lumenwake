@@ -10,7 +10,7 @@
 
     video {
         position: relative;
-        top: -125px;
+        top: -140px;
     }
 
     .background {
@@ -50,7 +50,7 @@
             position: relative;
             box-sizing: border-box;
 
-            background: #230637;
+            background: #2306373d;
             background-clip: padding-box;
             border: solid $border transparent;
 
@@ -75,7 +75,17 @@
                 z-index: -1;
                 margin: -$border;
                 border-radius: inherit;
-                background: radial-gradient(circle, #37DCFF, #000000);
+                background: radial-gradient(circle, #37daff6c, #0000006c);
+            }
+
+            transition: box-shadow 0.1s ease;
+
+            &:hover {
+                box-shadow:
+                    0 0 5px #37DCFF,
+                    0 0 10px rgba(0, 255, 255, 0.2),
+                    0 0 20px rgba(0, 255, 255, 0.023);
+
             }
         }
     }
