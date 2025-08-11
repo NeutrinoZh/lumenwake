@@ -1,6 +1,6 @@
 .intro {
     width: 100vw;
-    height: 75vh;
+    height: 700px;
 
     display: flex;
     justify-content: center;
@@ -9,8 +9,9 @@
     position: relative;
 
     video {
+        width: 100vw;
+        height: 700px;
         position: relative;
-        top: -140px;
     }
 
     .background {

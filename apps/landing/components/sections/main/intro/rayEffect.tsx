@@ -3,8 +3,6 @@ import { useRef, useEffect } from "react";
 export default function RayEffect() {
     return (
         <video
-            width="1920"
-            height="1080"
             autoPlay
             muted
             loop
