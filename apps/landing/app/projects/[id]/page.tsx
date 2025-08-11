@@ -9,13 +9,14 @@ import { About } from "@/components/sections/project/about";
 import { Gallery } from "@/components/sections/project/gallery";
 
 interface ProjectPageProps {
-    params: {
+    params: Promise<{
         id: string
-    }
+    }>
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-    const project = staticData.projects.find(item => item.id == params.id)
+export default async function ProjectPage({ params }: ProjectPageProps) {
+    const { id } = await params
+    const project = staticData.projects.find(item => item.id == id)
 
     return (
         <div className={styles.page}>
