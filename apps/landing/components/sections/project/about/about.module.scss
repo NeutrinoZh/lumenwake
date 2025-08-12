@@ -9,13 +9,21 @@
 
     padding: 10%;
 
+    @media (max-width: 1300px) {
+        padding: 1%;
+    }
+
+    @media (max-width: 900px) {
+        padding: 10%;
+    }
+
     .imageContainer {
         display: flex;
         justify-content: center;
         position: relative;
         width: 50%;
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
             display: none;
         }
     }
@@ -27,14 +35,14 @@
         width: 40%;
         margin-left: 10%;
 
-        @media (max-width: 800px) {
+        @media (max-width: 1300px) {
             width: 100%;
             margin-left: 0%;
         }
 
         h1 {
             text-align: center;
-            font-size: 48px;
+            font-size: 2.7rem;
             width: 230px;
             margin-bottom: 50px;
         }

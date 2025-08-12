@@ -3,11 +3,10 @@
 
     display: flex;
     justify-content: space-around;
-    padding: 0% 235px;
+    padding: 0% 10%;
     overflow: hidden;
 
     @media (max-width: 1300px) {
-        padding: 0% 10%;
         height: 600px;
 
         .image {

@@ -3,7 +3,7 @@
     width: 100%;
 
     .technologyCarousel {
-        height: 150px;
+        height: 10rem;
 
         display: flex;
         align-items: center;
@@ -23,6 +23,11 @@
 
         .technologyIcon {
             padding: 0 50px;
+
+            img {
+                width: 4rem;
+                height: auto;
+            }
         }
     }
 }
