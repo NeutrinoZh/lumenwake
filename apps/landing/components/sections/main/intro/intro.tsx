@@ -21,7 +21,7 @@ export default function Intro() {
                     <Image
                         src={FileIcon.src}
                         alt="Download"
-                        width={26}
+                        width={32}
                         height={32}
                     />
                     <Heading>

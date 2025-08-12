@@ -26,6 +26,9 @@
         }
 
         .input {
+            display: flex;
+            flex-direction: column;
+
             height: 70px;
             margin: 20px 0px;
 
@@ -43,7 +46,8 @@
             }
 
             .hline {
-                width: 100%;
+                align-self: center;
+                width: 80%;
                 height: 1px;
                 background: radial-gradient(circle, #37DCFF, #000000);
             }

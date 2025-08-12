@@ -61,8 +61,11 @@
             align-items: center;
             justify-content: center;
             align-self: center;
-            max-width: 25em;
-            width: 55%;
+            width: 25em;
+
+            @media (max-width: 620px) {
+                width: 20em;
+            }
 
             position: relative;
             box-sizing: border-box;
@@ -73,6 +76,8 @@
 
             border-radius: 20px;
             padding: 0.5em;
+
+            cursor: pointer;
 
             h1 {
                 font-size: 1em;
