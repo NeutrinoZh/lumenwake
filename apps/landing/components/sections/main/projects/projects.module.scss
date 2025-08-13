@@ -6,8 +6,16 @@
     padding: 0% 10%;
     overflow: hidden;
 
+    position: relative;
+    left: -30px;
+
     @media (max-width: 1300px) {
-        height: 600px;
+        padding: 5%;
+    }
+
+    @media (max-width: 1050px) {
+        height: 450px;
+        left: 0px;
 
         .image {
             display: none;
@@ -18,8 +26,13 @@
         user-select: none;
         margin: 350px 0px;
 
+
         @media (max-width: 1300px) {
-            margin: 250px 0px;
+            margin: 300px 0px;
+        }
+
+        @media (max-width: 1050px) {
+            margin: 120px 0px;
         }
     }
 
@@ -50,7 +63,7 @@
 
 
             button {
-                margin-top: 45px;
+                margin-top: 2em;
             }
         }
 

@@ -15,7 +15,8 @@ export default function Intro({
             <div className={styles.imageContainer}>
                 <Image
                     src={preview.src}
-                    fill
+                    width={1920}
+                    height={1080}
                     alt={title}
                 />
 

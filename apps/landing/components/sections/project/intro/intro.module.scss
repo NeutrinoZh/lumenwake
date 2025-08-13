@@ -2,18 +2,24 @@
     .imageContainer {
         position: relative;
         width: 100vw;
-        height: 1000px;
+        height: fit-content;
 
         display: flex;
         justify-content: center;
         align-items: end;
 
         img {
-            object-fit: cover;
-            object-position: center;
+            width: 100%;
+            height: auto;
+
+            align-self: start;
+            // object-fit: cover;
+            // object-position: center;
         }
 
         .title {
+            position: absolute;
+
             padding: 20px;
             border-radius: 50px;
 
@@ -22,11 +28,15 @@
             margin-bottom: 4%;
 
             h1 {
-                font-size: 96px;
+                font-size: 5em;
+
+                @media (max-width: 900px) {
+                    font-size: 3em;
+                }
+
                 text-align: center;
-                text-shadow:
-                    0 0 80px rgba(0, 0, 0, 1),
-                    0 0 80px rgba(0, 0, 0, 1);
+                text-shadow: 0 0 80px rgba(0, 0, 0, 1),
+                0 0 80px rgba(0, 0, 0, 1);
             }
         }
     }
