@@ -67,6 +67,8 @@
             align-self: center;
             width: 25em;
 
+            visibility: hidden;
+
             @media (max-width: 620px) {
                 width: 20em;
             }

@@ -17,7 +17,7 @@ export default function Intro() {
             </div>
             <div className={styles.content}>
                 <Heading>Lumenwake</Heading>
-                <button className={globalStyles.header}>
+                <button className={styles.downloadProposal}>
                     <Image
                         src={FileIcon.src}
                         alt="Download"
