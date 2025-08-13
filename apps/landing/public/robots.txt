@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://lumenwake.com
+
+# Sitemaps
+Sitemap: https://lumenwake.com/sitemap.xml
