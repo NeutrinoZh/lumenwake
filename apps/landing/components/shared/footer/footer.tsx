@@ -30,7 +30,7 @@ export default function Footer() {
                 />
             </div>
             <div className={styles.border} />
-            <p>© All Rights Reserved Lumenwake Entertainment 2025</p>
+            <p>© All Rights Reserved Lumenwake Studio 2025</p>
         </footer>
     )
 }
