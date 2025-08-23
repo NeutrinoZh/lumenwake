@@ -4,10 +4,8 @@ import styles from "./projects.module.scss"
 
 import { useRouter } from 'next/navigation';
 
-import SpaceBacPreview from "@/public/spacebac-preview.png"
-import FarmMergerPreview from "@/public/farmmerger-preview.png"
-
 import Image, { StaticImageData } from "next/image";
+import staticData from "@/staticData/staticData";
 
 interface ProjectParams {
     preview: StaticImageData,
@@ -34,11 +32,20 @@ const Project = ({ preview, url }: ProjectParams) => {
 }
 
 export default function Projects() {
+    const projectsData = staticData.projects;
+
     return (
         <div className={styles.projects}>
             <div className={styles.projectsContainer}>
-                <Project key={123} preview={SpaceBacPreview} url="./projects/space-bac" />
-                <Project key={124} preview={FarmMergerPreview} url="./projects/farm-merger" />
+                {
+                    projectsData.map(project =>
+                        <Project
+                            key={project.id}
+                            preview={project.poster}
+                            url={`./projects/${project.id}`}
+                        />
+                    )
+                }
             </div>
         </div>
     )

@@ -9,12 +9,16 @@
 
         .project {
 
-            min-width: 625px;
+            width: 625px;
             height: 325px;
 
             margin: 2%;
 
             transition: transform 0.3s ease;
+
+            img {
+                height: auto;
+            }
 
             &:hover {
                 transform: rotateZ(10deg);

@@ -26,13 +26,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             {
                 project ? <>
                     <Intro
-                        preview={project.poster}
+                        header={project.header}
+                        logo={project.logo}
                         title={project.name}
                     />
                     <Hline />
                     <About
                         description={project.description}
                         characterPhoto={project.character}
+                        steam={project.steam}
                     />
                     <Hline header="Gallery" />
                     <Gallery

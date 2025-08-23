@@ -1,5 +1,4 @@
 import styles from "./about.module.scss"
-import globalStyles from "@/app/variables.module.scss"
 import Image, { StaticImageData } from "next/image"
 
 import SteamIcon from "@/public/icons/steam-icon.png"
@@ -9,12 +8,14 @@ import { Text } from "@/components/shared/text"
 
 interface AboutParams {
     description: string,
-    characterPhoto: StaticImageData
+    characterPhoto: StaticImageData,
+    steam?: string
 }
 
 export default function About({
     description,
-    characterPhoto
+    characterPhoto,
+    steam
 }: AboutParams) {
     return (
         <div className={styles.about}>
@@ -22,14 +23,21 @@ export default function About({
                 <Heading>About The Game</Heading>
                 <Text className={styles.description}>{description}</Text>
                 <div className={styles.platforms}>
-                    <div className={styles.platform}>
-                        <Image
-                            src={SteamIcon.src}
-                            width={42}
-                            height={42}
-                            alt=""
-                        />
-                    </div>
+                    {steam ?
+                        <a
+                            className={styles.platform}
+                            href={steam}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Image
+                                src={SteamIcon.src}
+                                width={42}
+                                height={42}
+                                alt=""
+                            />
+                        </a> : <></>
+                    }
                 </div>
             </div>
             <div className={styles.imageContainer}>

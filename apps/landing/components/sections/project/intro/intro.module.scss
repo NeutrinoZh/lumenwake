@@ -8,13 +8,23 @@
         justify-content: center;
         align-items: end;
 
-        img {
+        .header {
             width: 100%;
             height: auto;
 
             align-self: start;
             // object-fit: cover;
             // object-position: center;
+        }
+
+        .logo {
+            position: absolute;
+
+            width: 35vw;
+            height: auto;
+
+            align-self: center;
+            left: 5em;
         }
 
         .title {

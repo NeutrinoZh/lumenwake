@@ -4,6 +4,8 @@ import globalStyles from "@/app/variables.module.scss"
 import Image from "next/image";
 import Logo from "@/public/logo.png"
 
+import { Heading } from "@/components/shared/heading";
+
 export default function Intro() {
     return (
         <div className={styles.intro}>
@@ -16,8 +18,7 @@ export default function Intro() {
                 />
             </div>
             <div className={styles.description}>
-                <h1 className={globalStyles.header}>Games</h1>
-                <p>Lorem ipsum dolor sit amet consectetur. Arcu justo diam ultrices tellus. Non neque donec risus et mollis. </p>
+                <Heading className={globalStyles.header}>Games</Heading>
             </div>
         </div>
     )

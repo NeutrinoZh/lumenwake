@@ -6,15 +6,25 @@ import Image, { StaticImageData } from "next/image";
 import SteamIcon from "@/public/icons/steam-icon.png"
 import DiscordIcon from "@/public/icons/discord-icon.png"
 
-const SocialNetworkIcon = ({ icon }: { icon: StaticImageData }) => (
-    <div className={styles.socialNetworkIcon}>
+interface SocialNetworkIconProps {
+    icon: StaticImageData;
+    url: string;
+}
+
+const SocialNetworkIcon = ({ icon, url }: SocialNetworkIconProps) => (
+    <a
+        className={styles.socialNetworkIcon}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+    >
         <Image
             src={icon.src}
             width={56}
             height={56}
             alt="social network"
         />
-    </div>
+    </a>
 )
 
 export default function Footer() {
@@ -24,9 +34,11 @@ export default function Footer() {
             <div className={styles.iconsContainer}>
                 <SocialNetworkIcon
                     icon={SteamIcon}
+                    url="https://store.steampowered.com/app/3605030/Space_Bac/"
                 />
                 <SocialNetworkIcon
                     icon={DiscordIcon}
+                    url="https://discord.gg/A3XWVXKGhX"
                 />
             </div>
             <div className={styles.border} />
